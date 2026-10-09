@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/assets/css/Style.css" />
+    <title>Cambiar contraseña</title>
+  </head>
+
+  <body>
+    <!-- preloader -->
+    <div class="preloader" id="preloader">
+      <div class="spinner">Cargando...</div>
+    </div>
+
+    <header>
+      <h1>Cambiar contraseña</h1>
+      <button class="toggle-button" id="toggle-button" aria-label="Abrir menú">
+        ☰
+      </button>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Inicio</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="container">
+      <form action="/cambiar-password" method="POST">
+        <!-- Mensajes: tu main.js busca este id al mostrar avisos -->
+        <div class="validation-message" id="message-from-server">
+          <p></p>
+        </div>
+
+        <div class="form-group">
+          <label for="old-password">Ingrese su contraseña anterior</label>
+          <input
+            type="password"
+            id="old-password"
+            name="old-password"
+            class="password-field"
+            data-type="password"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="new-password">Ingrese su nueva contraseña</label>
+          <input
+            type="password"
+            id="new-password"
+            name="new-password"
+            class="password-field"
+            data-type="password"
+            pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[#?!@$%^&*\-]).{8,}$"
+            title="Mínimo 8 caracteres, una mayúscula, una minúscula, un número y un carácter especial"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="confirm-password">Verifique su contraseña</label>
+          <input
+            type="password"
+            id="confirm-password"
+            name="confirm-password"
+            class="password-field"
+            data-type="password"
+            required
+          />
+        </div>
+
+        <div class="form-group checkbox-group">
+          <input type="checkbox" id="show-password" name="show-password" />
+          <label for="show-password">Mostrar contraseñas</label>
+        </div>
+
+        <div class="contenedor-boton">
+          <button type="submit" class="enviar">Cambiar contraseña</button>
+        </div>
+      </form>
+    </div>
+
+    <footer>
+      <p>&copy; 2024 My Website. All rights reserved.</p>
+    </footer>
+
+    <script src="/assets/js/main.js"></script>
+  </body>
+</html>

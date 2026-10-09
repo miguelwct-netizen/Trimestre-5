@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="assets/img/favicon.png" type="image/png" />
+    <!-- Link to the external CSS file -->
+    <link rel="stylesheet" href="/assets/css/Style.css" />
+    <title>Cambiar Contraseña</title>
+  </head>
+  <body>
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+      <div class="spinner">Cargando...</div>
+    </div>
+
+    <!-- Header -->
+    <header>
+      <h1>Cambiar Contraseña</h1>
+      <button class="toggle-button" id="toggle-button" aria-label="Abrir menú">
+        ☰
+      </button>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Inicio</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="login-container">
+      <form action="/reset-password" method="POST">
+        <!-- main.js busca el id "message-from-server" y un <p> dentro -->
+        <div class="validation-message" id="message-from-server">
+          <p></p>
+        </div>
+
+        <div class="form-group">
+          <label for="reset-email">Correo asociado a la cuenta</label>
+          <input
+            type="email"
+            id="reset-email"
+            name="email"
+            placeholder="tucorreo@ejemplo.com"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="new-password">Ingrese su nueva contraseña</label>
+          <input
+            type="password"
+            id="new-password"
+            name="new-password"
+            class="password-field"
+            data-type="password"
+            pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[#?!@$%^&*\-]).{8,}$"
+            title="Mínimo 8 caracteres, una mayúscula, una minúscula, un número y un carácter especial"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="confirm-password">Verifique su contraseña</label>
+          <input
+            type="password"
+            id="confirm-password"
+            name="confirm-password"
+            class="password-field"
+            data-type="password"
+            required
+          />
+        </div>
+
+        <div class="form-group checkbox-group">
+          <input type="checkbox" id="show-password" name="show-password" />
+          <label for="show-password">Mostrar contraseñas</label>
+        </div>
+
+        <button type="submit">Cambiar contraseña</button>
+      </form>
+    </div>
+
+    <footer>
+      <p>&copy; 2024 Your Company. All rights reserved.</p>
+    </footer>
+
+    <script src="/assets/js/main.js"></script>
+  </body>
+</html>
