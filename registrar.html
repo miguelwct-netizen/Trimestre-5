@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/assets/css/Style.css" />
+    <title>Registro</title>
+  </head>
+
+  <>
+    <!-- preloader -->
+    <div class="preloader" id="preloader">
+      <div class="spinner">Cargando...</div>
+    </div>
+
+    <header>
+      <h1>Registro</h1>
+      <button class="toggle-button" id="toggle-button" aria-label="Abrir menú">
+        ☰
+      </button>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Inicio</a></li>
+          <!-- <li>a href="solicitar_recuperacion.html">Solicitar Recuperacion Contraseña</a></li> -->
+
+        </ul>
+      </nav>
+    </header>
+
+    <div class="container">
+      <form>
+        <label for="name">Nombre</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Nombre Completo"
+        />
+
+        <label for="lname">Apellidos</label>
+        <input
+          type="text"
+          id="lname"
+          name="lname"
+          placeholder="Apellidos Completos"
+        />
+
+        <label for="email">Correo electronico</label>
+        <input
+          type="text"
+          id="email"
+          name="email"
+          placeholder="Ingrese su correo"
+        />
+
+        <label for="Country">Ciudad</label>
+        <select id="Country" name="Country">
+          <option value="" disabled selected>Seleccione una ciudad</option>
+          <option value="bogota">Bogota</option>
+          <option value="medellin">Medellin</option>
+          <option value="bucaramanga">Bucaramanga</option>
+        </select>
+
+        <div class="contenedor-boton">
+          <button type="submit" class="enviar">Registrarse</button>
+        </div>
+      </form>
+    </div>
+
+    <footer>
+      <p>&copy; 2024 My Website. All rights reserved.</p>
+    </footer>
+
+    <script src="/assets/js/main.js"></script>
+  </body>
+</html>
