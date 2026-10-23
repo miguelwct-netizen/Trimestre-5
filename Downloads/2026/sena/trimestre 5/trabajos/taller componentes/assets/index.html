@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="assets/img/favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <title>Taller de Componentes Front-End</title>
+  </head>
+  <body>
+    <!-- Preloader -->
+    <div class="preloader" id="preloader" style="display: none">
+      <div class="spinner">Cargando...</div>
+    </div>
+
+    <!-- Componente Header Web Component -->
+    <header-component title="Sinapsis Modular"></header-component>
+
+    <!-- Contenedor dinámico de vistas basadas en componentes -->
+    <main id="app-container">
+      <auth-form type="login"></auth-form>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 Sinapsis Technologies. Componentes Web.</p>
+    </footer>
+
+    <!-- Script Principal Modular -->
+    <script type="module" src="/assets/js/main.js"></script>
+  </body>
+</html>
